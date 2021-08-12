@@ -13,7 +13,8 @@ export default function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path='/' component={Home} />
+        <Route exact path='/' component={Home} />
+        <Route path='/weather' component={Weather} />
       </Switch>
     </div>
   )
