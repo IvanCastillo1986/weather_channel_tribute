@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { apiURL } from '../util/apiURL.js'
 import axios from 'axios'
+import { Container } from 'react-bootstrap'
+
+import WeatherCard from './WeatherCard'
 
 
 export default function CurrentWeather() {
@@ -11,11 +14,17 @@ export default function CurrentWeather() {
     useEffect(() => {
         axios.get(`${API}`)
         .then(res => setWeatherData(res.data))
-    }, [])
+    }, [API])
 
     return (
-        <div>
+        <Container fluid>
             <h1>Current Weather</h1>
-        </div>
+            <h3>Weather for {weatherData.resolvedAddress}</h3>
+            {
+            weatherData ?
+            <WeatherCard weatherData={weatherData}/>
+            : null
+            }
+        </Container>
     )
 }
