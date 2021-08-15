@@ -17,8 +17,7 @@ export default function CurrentWeather() {
     }, [API])
 
     return (
-        <Container fluid>
-            <h1>Current Weather</h1>
+        <Container className='text-center' fluid>
             <h3>Weather for {weatherData.resolvedAddress}</h3>
             {
             weatherData ?
