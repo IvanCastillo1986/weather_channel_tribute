@@ -8,9 +8,8 @@ import WeatherCard from './WeatherCard'
 
 export default function CurrentWeather() {
     const [weatherData, setWeatherData] = useState({})
-
     const API = apiURL()
-    console.log(API)
+
     useEffect(() => {
         axios.get(`${API}`)
         .then(res => setWeatherData(res.data))
