@@ -1,6 +1,6 @@
 import React from 'react'
 import CurrentWeather from '../Components/CurrentWeather'
-import './Weather.css'
+import './Current.css'
 
 
 export default function Weather() {
@@ -8,7 +8,7 @@ export default function Weather() {
 
     return (
         <div className='Weather'>
-            <h1>Weather Forecast</h1>
+            <h1>Current Weather</h1>
             <CurrentWeather />
         </div>
     )

@@ -8,9 +8,10 @@ export default function NavBar() {
 
     return (
         <Navbar>
-            <Nav>
+            <Nav className='flex-column'>
                 <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                <Nav.Link as={Link} to='/weather'>Forecast</Nav.Link>
+                <Nav.Link as={Link} to='/current'>Current Weather</Nav.Link>
+                <Nav.Link as={Link} to='/3-day'>3-Day Forecast</Nav.Link>
             </Nav>
         </Navbar>
     )

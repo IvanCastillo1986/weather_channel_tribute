@@ -6,6 +6,11 @@ const React = {
         return compo
     }
 }
+// React is a JS object with a render() method
+// Component is a function that takes in props as parameter, and also has a render() method
+// Invoking React.render() involves:
+    // A (Component) parameter in the render() call
+    // 
 
 
 let Component = (props) => {
@@ -22,17 +27,6 @@ let Component = (props) => {
 
 let App = React.render(Component)    // render
 // logs: render { type: 'div', inner: 'likes' }
-
-Component = (props) => {
-    return {
-        render: () => {
-            console.log("render", {
-                type: "p",
-                inner: props.unit
-            })
-        }
-    }
-}
 
 App = React.render(Component)    // re-render
 // logs: render { type: 'div', inner: 'likes' }

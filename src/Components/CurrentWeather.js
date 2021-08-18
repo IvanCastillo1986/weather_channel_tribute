@@ -3,8 +3,6 @@ import { apiURL } from '../util/apiURL.js'
 import axios from 'axios'
 import { Container } from 'react-bootstrap'
 
-import WeatherCard from './WeatherCard'
-
 
 export default function CurrentWeather() {
     const [weatherData, setWeatherData] = useState({})
@@ -17,12 +15,8 @@ export default function CurrentWeather() {
 
     return (
         <Container className='text-center' fluid>
-            <h3>Weather for {weatherData.resolvedAddress}</h3>
-            {
-            weatherData ?
-            <WeatherCard weatherData={weatherData}/>
-            : null
-            }
+            <h4>In {weatherData.resolvedAddress}</h4>
+            <p>{weatherData.description}</p>
         </Container>
     )
 }
