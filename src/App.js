@@ -7,9 +7,13 @@ import NavBar from './Components/NavBar'
 import Home from './Pages/Home'
 import Current from './Pages/Current'
 import ThreeDay from './Pages/ThreeDay'
+import About from './Pages/About'
 
 
 export default function App() {
+
+  // Change the margin in sidenav
+  // Change the responsiveness of sidenav, to turn it into topnav on mobile breakpoint
 
 
   return (
@@ -17,7 +21,7 @@ export default function App() {
     <div className='App'>
       <Container fluid>
         <Row>
-          <Col xs={2}>
+          <Col md='auto'>
             <NavBar />
           </Col>
           <Col>
@@ -26,6 +30,7 @@ export default function App() {
               <Route exact path='/' component={Home} />
               <Route path='/current' component={Current} />
               <Route path='/3day' component={ThreeDay} />
+              <Route path='/about' component={About} />
             </Switch>
           </main>
           </Col>
