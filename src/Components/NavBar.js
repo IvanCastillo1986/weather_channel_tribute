@@ -7,11 +7,12 @@ export default function NavBar() {
 
 
     return (
-        <Navbar>
+        <Navbar style={{backgroundColor: 'purple', width: '100%'}} >
             <Nav className='flex-column'>
                 <Nav.Link as={Link} to='/'>Home</Nav.Link>
                 <Nav.Link as={Link} to='/current'>Current Weather</Nav.Link>
-                <Nav.Link as={Link} to='/3-day'>3-Day Forecast</Nav.Link>
+                <Nav.Link as={Link} to='/3day'>3-Day Forecast</Nav.Link>
+                <Nav.Link as={Link} to='/about'>About Me</Nav.Link>
             </Nav>
         </Navbar>
     )
