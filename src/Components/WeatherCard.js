@@ -1,5 +1,4 @@
 import React from 'react'
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap'
 
 
 export default function WeatherCard({ day }) {
@@ -7,24 +6,22 @@ export default function WeatherCard({ day }) {
     console.log(day)
 
     return (
-        <Card style={{width: '15rem'}}>
-            <Card.Body>
-                <Card.Title style={{fontWeight: 'bold'}}>Current Forecast</Card.Title>
-                <Card.Text>
+        <div style={{width: '15rem'}}>
+                <p style={{fontWeight: 'bold'}}>Current Forecast</p>
+                <p>
                     {day.description}
-                </Card.Text>
+                </p>
                 {
                 day.conditions ?
-                <ListGroup>
-                    <ListGroupItem>Temperature: {day.temp}</ListGroupItem>
-                    <ListGroupItem>Feels Like: {day.feelslike}</ListGroupItem>
-                    <ListGroupItem>Humidity: {day.humidity}</ListGroupItem>
-                    <ListGroupItem>Windspeed: {day.windspeed}</ListGroupItem>
-                    <ListGroupItem>Conditions: {day.conditions}</ListGroupItem>
-                </ListGroup> :
+                <ul>
+                    <li>Temperature: {day.temp}</li>
+                    <li>Feels Like: {day.feelslike}</li>
+                    <li>Humidity: {day.humidity}</li>
+                    <li>Windspeed: {day.windspeed}</li>
+                    <li>Conditions: {day.conditions}</li>
+                </ul> :
                 null
                 }
-            </Card.Body>
-        </Card>
+        </div>
     )
 }

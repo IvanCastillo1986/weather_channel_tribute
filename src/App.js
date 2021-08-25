@@ -19,23 +19,15 @@ export default function App() {
   return (
 
     <div className='App'>
-      <Container fluid>
-        <Row>
-          <Col md='auto'>
-            <NavBar />
-          </Col>
-          <Col>
-          <main>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/current' component={Current} />
-              <Route path='/3day' component={ThreeDay} />
-              <Route path='/about' component={About} />
-            </Switch>
-          </main>
-          </Col>
-        </Row>
-      </Container>
+      <NavBar />
+      <main>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/current' component={Current} />
+          <Route path='/3day' component={ThreeDay} />
+          <Route path='/about' component={About} />
+        </Switch>
+      </main>
     </div>
   )
 }

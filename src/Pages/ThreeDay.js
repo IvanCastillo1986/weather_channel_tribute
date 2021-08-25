@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import ThreeDayWeather from '../Components/ThreeDayWeather'
 // import WeatherCard from '../Components/WeatherCard'
 

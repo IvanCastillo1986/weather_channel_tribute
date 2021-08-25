@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { apiURL } from '../util/apiURL.js'
 import axios from 'axios'
-import { Container } from 'react-bootstrap'
 
 
 export default function CurrentWeather() {
@@ -14,9 +13,9 @@ export default function CurrentWeather() {
     }, [API])
 
     return (
-        <Container className='text-center' fluid>
+        <div>
             <h4>In {weatherData.resolvedAddress}</h4>
             <p>{weatherData.description}</p>
-        </Container>
+        </div>
     )
 }
