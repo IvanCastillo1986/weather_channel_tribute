@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './App.css'
-import { Container, Row, Col } from 'react-bootstrap'
 
 import NavBar from './Components/NavBar'
+import Logo from './Components/Logo'
 import Home from './Pages/Home'
 import Current from './Pages/Current'
 import ThreeDay from './Pages/ThreeDay'
@@ -20,6 +20,7 @@ export default function App() {
 
     <div className='App'>
       <NavBar />
+      <Logo />
       <main>
         <Switch>
           <Route exact path='/' component={Home} />
