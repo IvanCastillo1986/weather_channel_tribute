@@ -1,0 +1,26 @@
+.NavBar {
+    background-color: rgb(51, 103, 192);
+    height: 100vh;
+    border-right: 5px solid blue;
+    position: relative;
+}
+.NavBar::before {
+    content: "";
+    position: absolute;
+    border: 100vh solid yellow;
+    left: 100px;
+    top: 100px;
+    z-index: -1;
+}
+
+.NavBar nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+

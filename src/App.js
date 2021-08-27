@@ -12,16 +12,16 @@ import About from './Pages/About'
 
 export default function App() {
 
-  // Change the margin in sidenav
-  // Change the responsiveness of sidenav, to turn it into topnav on mobile breakpoint
-
 
   return (
 
     <div className='App'>
       <NavBar />
-      <Logo />
       <main>
+        <div className='Header'>
+          <Logo />
+          <p>Latest Observations</p>
+        </div>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/current' component={Current} />
