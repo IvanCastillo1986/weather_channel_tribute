@@ -1,48 +1,80 @@
 .App {
   font-family: monospace;
-  font-size: 24px;
   display: flex;
+  background: linear-gradient(
+    rgb(55, 0, 157) 7.3%, 
+    rgb(255, 127, 47) 8%, 
+    rgb(255, 127, 47) 10%,
+    rgba(55, 0, 157, 0.769) 20%, 
+    rgb(255, 127, 47) 80% 
+  );
+  position: relative;
 }
 
-.Header {
-  display: flex;
-  padding: 20px;
-  align-items: center;
+main {
+  margin-top: 32px;
 }
 
-.Header .Logo {
+.Logo {
   background-image: linear-gradient(blue, rgb(217, 217, 255));
-  width: 150px;
-  height: 100px;
-  display: flex;
+  width: 140px;
+  height: 95px;
+  display: inline-flex;
   flex-wrap: wrap;
   border: 5px solid white;
   border-radius: 10px;
   box-shadow: rgb(2, 2, 146) 5px 10px 5px;
   margin-right: 5px;
+  position: relative;
+  top: -20px;
+  z-index: 99;
 }
-
 .Logo p {
   color: white;
   text-align: center;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   font-family: 'Roboto Condensed', sans-serif;
   text-shadow: rgb(0, 0, 62) 1.5px 2.5px 3px;
-  padding: 4px;
+  padding: 4px 2px;
   margin: 0;
 }
 
+.Header {
+  display: inline-flex;
+  align-items: center;
+}
 .Header > p {
   color: yellow;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 35px;
   text-shadow: black 3px 4px 3px;
+  display: inline-block;
+}
+
+.Home {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column;
+  align-items: center; */
+}
+.Home > div {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 
 
 
+/* 
 
+- The Weather Channel Logo is position absolute from the top
+- A div bar up top - blue
+- A large div that takes up most of the page - orange-blue gradient
+- A footer div with the same pattern as the sidenav
 
+*/

@@ -14,12 +14,11 @@ export default function App() {
 
 
   return (
-
     <div className='App'>
       <NavBar />
       <main>
+        <Logo />
         <div className='Header'>
-          <Logo />
           <p>Latest Observations</p>
         </div>
         <Switch>
