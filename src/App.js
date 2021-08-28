@@ -4,6 +4,7 @@ import './App.css'
 
 import NavBar from './Components/NavBar'
 import Logo from './Components/Logo'
+import DateTime from './Components/DateTime'
 import Home from './Pages/Home'
 import Current from './Pages/Current'
 import ThreeDay from './Pages/ThreeDay'
@@ -20,6 +21,7 @@ export default function App() {
         <Logo />
         <div className='Header'>
           <p>Latest Observations</p>
+          <DateTime />
         </div>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -31,3 +33,9 @@ export default function App() {
     </div>
   )
 }
+
+// The header needs to contain the Latest Observation one side
+// And the Time and Date on the other side
+  // TnD needs to be positioned absolute on the right side
+// TnD will be just above the right edge of the current Page div
+  // Wherever the current Page div ends, is where the TnD element ends
