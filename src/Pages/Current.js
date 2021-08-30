@@ -7,8 +7,7 @@ export default function Weather() {
 
 
     return (
-        <div className='Weather'>
-            <h1>Current Weather</h1>
+        <div className='Current'>
             <CurrentWeather />
         </div>
     )

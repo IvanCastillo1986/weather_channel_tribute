@@ -11,13 +11,13 @@ export default function DateTime() {
     const mySeconds = date.getSeconds()
     const myDay = date.toDateString().slice(0, -5)
 
-    const [myTime] = useState(`${myHours}:${myMinutes}:${date.getSeconds()}`)
+    const [myTime] = useState(`${myHours} : ${myMinutes} : ${date.getSeconds()}`)
 
 
     return (
         <div className='DateTime'>
             <div>{myTime}{myHours <= 12 ? <span> AM</span> : <span> PM</span>}</div>
-            <div>{myDay}</div>
+            <div>{myDay.toUpperCase()}</div>
         </div>
     )
 }

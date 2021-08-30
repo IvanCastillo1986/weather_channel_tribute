@@ -13,9 +13,13 @@ export default function CurrentWeather() {
     }, [API])
 
     return (
-        <div>
-            <h4>In {weatherData.resolvedAddress}</h4>
-            <p>{weatherData.description}</p>
+        <div className='CurrentWeather'>
+            <div className='leftDiv'>
+                <p>{weatherData.description}</p>
+            </div>
+            <div className='rightDiv'>
+                <h4>{weatherData.resolvedAddress}</h4>
+            </div>
         </div>
     )
 }

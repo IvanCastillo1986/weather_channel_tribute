@@ -1,3 +1,27 @@
-.Weather {
-    text-align: center;
+.Current {
+    background: linear-gradient(
+        rgb(79, 122, 216) 0, 
+        rgb(41, 63, 113) 5%, 
+        rgb(41, 63, 113) 95%, 
+        rgb(79, 122, 216) 100%
+    );
+    border-right: 5% solid rgb(79, 122, 216);
+    margin-right: 64px;
+    height: 400px;
+    color: white;
+}
+
+.CurrentWeather {
+    display: flex;
+
+}
+
+.leftDiv {
+    width: 50%;
+    font-size: 24px;
+}
+
+.rightDiv {
+    width: 50%;
+    font-size: 24px;
 }
