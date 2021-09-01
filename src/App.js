@@ -19,10 +19,10 @@ export default function App() {
       <NavBar />
       <main>
         <Logo />
-        <div className='Header'>
-          <p>Latest Observations</p>
+        <header className='Header'>
+          <span className='title'>Latest Observations</span>
           <DateTime />
-        </div>
+        </header>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/current' component={Current} />

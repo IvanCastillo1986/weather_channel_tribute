@@ -15,9 +15,9 @@ export default function DateTime() {
 
 
     return (
-        <div className='DateTime'>
+        <span className='DateTime'>
             <div>{myTime}{myHours <= 12 ? <span> AM</span> : <span> PM</span>}</div>
             <div>{myDay.toUpperCase()}</div>
-        </div>
+        </span>
     )
 }
