@@ -15,7 +15,7 @@ export default function CurrentWeather() {
     return (
         <div className='CurrentWeather'>
             <div className='leftDiv'>
-                <p>{weatherData.description}</p>
+                <p className='temp'>{weatherData.currentConditions.temp}</p>
             </div>
             <div className='rightDiv'>
                 <h4>{weatherData.resolvedAddress}</h4>
