@@ -1,0 +1,12 @@
+.ThreeDayWeather {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.WeatherCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    border: 1px solid blue;
+}

@@ -1,7 +1,6 @@
 import React from 'react'
 import ThreeDayWeather from '../Components/ThreeDayWeather'
-// import WeatherCard from '../Components/WeatherCard'
-
+import './ThreeDay.css'
 
 
 export default function ThreeDay() {

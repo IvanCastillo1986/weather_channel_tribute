@@ -6,8 +6,8 @@ export default function WeatherCard({ day }) {
     console.log(day)
 
     return (
-        <div style={{width: '15rem'}}>
-                <p style={{fontWeight: 'bold'}}>Current Forecast</p>
+        <div className='WeatherCard'>
+                <p>Current Forecast</p>
                 <p>
                     {day.description}
                 </p>

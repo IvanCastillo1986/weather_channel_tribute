@@ -16,8 +16,7 @@ export default function ThreeDayWeather() {
 
 
     return (
-        <div>
-            <h1>Three Day Weather</h1>
+        <div className='ThreeDayWeather'>
             { 
             weather.days ?
             weather.days.map((day, i) => {
