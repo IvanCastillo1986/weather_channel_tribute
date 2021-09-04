@@ -8,5 +8,14 @@
     flex-direction: column;
     align-items: center;
     width: 25%;
-    border: 1px solid blue;
+    border: 3px solid white;
+    margin-right: 18px;
+    box-shadow: 0 0 10px black;
+}
+
+.Day {
+    font-size: 42px;
+    color: yellow;
+    text-shadow: 2px 3px 2px black;
+    margin-top: 0;
 }
