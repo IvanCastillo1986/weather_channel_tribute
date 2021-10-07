@@ -1,4 +1,5 @@
 .App {
+  height: 100vh;
   font-family: monospace;
   display: flex;
   background: linear-gradient(
@@ -13,7 +14,6 @@
 
 main {
   margin-top: 32px;
-  width: 100%;
 }
 
 .Logo {
@@ -74,6 +74,26 @@ main {
   flex-direction: column;
   align-items: flex-end;
   justify-self: end;
+}
+
+.Footer {
+  position: absolute;
+  background-color: rgb(51, 103, 192);
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  bottom: 0;
+  color: white;
+  border-top: 3px solid white;
+}
+.Footer::before {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 100%;
+  height: 3px;
+  /* z-index: 99; */
+  top: -5px;
 }
 
 

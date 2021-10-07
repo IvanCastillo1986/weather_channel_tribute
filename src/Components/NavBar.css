@@ -1,6 +1,6 @@
 .NavBar {
     background-color: rgb(51, 103, 192);
-    height: 100vh;
+    /* height: 100%; */
     width: 180px;
     position: relative;
     border-right: 3px solid lightblue;
@@ -27,4 +27,3 @@ nav a {
     color: white;
     padding: 20px 0;
 }
-
