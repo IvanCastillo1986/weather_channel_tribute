@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 250px;
     height: 425px;
     border: 3px solid white;
@@ -55,4 +56,24 @@
     color: yellow;
     text-shadow: 2px 3px 2px black;
     margin-top: 0;
+}
+.LoHiDiv {
+    color: white;
+    text-shadow: 2px 3px 2px black;
+    width: 100%;
+    font-size: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.LoHiDiv div:first-of-type {
+    display: inline-flex;
+    flex-direction: column;
+}
+.LoHiDiv div:last-of-type span:first-of-type {
+    color: yellow;
+}
+.LoHiDiv div:last-of-type {
+    display: inline-flex;
+    flex-direction: column;
 }
