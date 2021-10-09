@@ -8,7 +8,6 @@ export default function DateTime() {
     const date = new Date()
     const myHours = date.getHours()
     const myMinutes = date.getMinutes()
-    const mySeconds = date.getSeconds()
     const myDay = date.toDateString().slice(0, -5)
 
     const [myTime] = useState(`${myHours} : ${myMinutes} : ${date.getSeconds()}`)

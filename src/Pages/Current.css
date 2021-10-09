@@ -5,7 +5,7 @@
         rgb(41, 63, 113) 95%, 
         rgb(79, 122, 216) 100%
     );
-    border-right: 5% solid rgb(79, 122, 216);
+    border-right: 5px solid rgb(79, 122, 216);
     margin-right: 64px;
     height: 400px;
     color: white;
@@ -43,7 +43,6 @@
 .rightDiv div {
     margin-left: 18px;
     margin-top: 10px;
-
 }
 .rightDiv p {
     margin: 8px;

@@ -1,19 +1,9 @@
 .NavBar {
     background-color: rgb(51, 103, 192);
-    /* height: 100%; */
     width: 180px;
     position: relative;
     border-right: 3px solid lightblue;
-    margin-right: 50px;
 }
-/* This is the NavBar's second border */
-/*.NavBar::before { 
-    border-right: 3px solid blue;
-    content: "";
-    position: absolute;
-    height: 100vh;
-    left: 183px;
-}*/
 
 .NavBar nav {
     display: flex;
