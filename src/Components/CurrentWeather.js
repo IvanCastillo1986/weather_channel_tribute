@@ -11,11 +11,11 @@ export default function CurrentWeather() {
     useEffect(() => {
         axios.get(`${API}`)
         .then(res => {
-            setWeatherData(res.data)
+            setWeatherData(res.data.observations[0])
             setLoading(false)
         })
     }, [API])
-    console.log(weatherData.currentConditions)
+    console.log(weatherData)
 
     if (isLoading) {
         return <h1>Loading...</h1>
@@ -24,18 +24,19 @@ export default function CurrentWeather() {
     return (
         <div className='CurrentWeather'>
             <div className='leftDiv'>
-                <p className='temp'>{weatherData.currentConditions.temp}°</p>
-                <p>{weatherData.currentConditions.conditions}</p>
+                <p className='temp'>{weatherData.temp}°</p>
+                <p>{weatherData.wx_phrase}</p>
+                <p>Wind: {weatherData.wdir} &nbsp; {weatherData.wspd}</p>
             </div>
             <div className='rightDiv'>
-                <span className='city'>{weatherData.address}</span>
+                <span className='city'>{weatherData.obs_name}</span>
                 <div>
-                    <p>Humidity: {weatherData.currentConditions.humidity}%</p>
-                    <p>Dewpoint: {weatherData.currentConditions.dewpoint}°</p>
-                    <p>Ceiling: </p>
-                    <p>Visibility: {weatherData.currentConditions.visibility}mi.</p>
-                    <p>Pressure: {weatherData.currentConditions.pressure}</p>
-                    <p>Wind Chill: </p>
+                    <p>Humidity: {Math.round(weatherData.rh)}%</p>
+                    <p>Dewpoint: {weatherData.dewPt}°</p>
+                    <p>Ceiling: {weatherData.icon_extd}</p>
+                    <p>Visibility: {weatherData.vis}mi.</p>
+                    <p>Pressure: {weatherData.pressure}</p>
+                    <p>Wind Chill: {weatherData.wc}°</p>
                 </div>
             </div>
         </div>

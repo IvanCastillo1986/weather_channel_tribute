@@ -19,7 +19,6 @@ export default function App() {
 
     <div className='App'>
       <NavBar />
-      {/* <div> */}
       <main>
         <Logo />
         <header className='Header'>
@@ -33,7 +32,6 @@ export default function App() {
           <Route path='/about' component={About} />
         </Switch>
       </main>
-      {/* </div> */}
     <Footer />
     </div>
   )
