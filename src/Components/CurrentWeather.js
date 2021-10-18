@@ -26,14 +26,14 @@ export default function CurrentWeather() {
             <div className='leftDiv'>
                 <p className='temp'>{weatherData.temp}°</p>
                 <p>{weatherData.wx_phrase}</p>
-                <p>Wind: {weatherData.wdir} &nbsp; {weatherData.wspd}</p>
+                <p>Wind: {weatherData.wdir_cardinal} &nbsp; {weatherData.wspd}</p>
             </div>
             <div className='rightDiv'>
                 <span className='city'>{weatherData.obs_name}</span>
                 <div>
                     <p>Humidity: {Math.round(weatherData.rh)}%</p>
                     <p>Dewpoint: {weatherData.dewPt}°</p>
-                    <p>Ceiling: {weatherData.icon_extd}</p>
+                    <p>Ceiling: {weatherData.icon_extd}ft.</p>
                     <p>Visibility: {weatherData.vis}mi.</p>
                     <p>Pressure: {weatherData.pressure}</p>
                     <p>Wind Chill: {weatherData.wc}°</p>
