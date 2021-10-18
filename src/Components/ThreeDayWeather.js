@@ -7,23 +7,24 @@ import WeatherCard from './WeatherCard'
 export default function ThreeDayWeather() {
 
     const [ weather, setWeather ] = useState({})
+    const [ isLoading, setIsLoading ] = useState(true)
 
     useEffect(() => {
-        axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Queens%2C%20NY/next2days?unitGroup=us&key=3LBCQN3X7PM6J5L92ZBUUJEZ8`)
-        .then(res => setWeather(res.data))
+        axios.get(`https://api.weather.com/v3/wx/forecast/daily/3day?postalKey=11418:US&units=e&language=en-US&format=json&apiKey=8042786b38064cbb82786b3806fcbbf9`)
+        .then(res => {
+            setWeather(res.data);
+            setIsLoading(false);
+        })
     }, [])
-    console.log(weather.days)
 
+    if (isLoading) {
+        return <h2>Loading...</h2>
+    }
+    
 
     return (
         <div className='ThreeDayWeather'>
-            { 
-            weather.days ?
-            weather.days.map((day, i) => {
-                return <WeatherCard key={i} day={day} />
-            }) 
-            : null 
-            }
+            <WeatherCard day={weather.dayOfWeek[0]} />
         </div>
     )
 }
