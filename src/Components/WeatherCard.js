@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function WeatherCard({ day }) {
+export default function WeatherCard({ day, status, lo, hi }) {
 
     // let today = new Date(day.datetime.split('-').join(','))
     
@@ -10,12 +10,11 @@ export default function WeatherCard({ day }) {
 
     return (
         <div className='WeatherCard'>
-                <p className='Day'>{day}</p>
-                <p>
-                </p>
+                <p className='Day'>{day.slice(0, 3)}</p>
+                <p>{status}</p>
                 <div className='LoHiDiv'>
-                    <div><span>Lo</span><span>34</span></div> 
-                    <div><span>Hi</span><span>44</span></div> 
+                    <div><span>Lo</span><span>{lo}</span></div> 
+                    <div><span>Hi</span><span>{hi}</span></div> 
                 </div>
         </div>
     )

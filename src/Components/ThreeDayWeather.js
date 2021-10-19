@@ -7,6 +7,7 @@ import WeatherCard from './WeatherCard'
 export default function ThreeDayWeather() {
 
     const [ weather, setWeather ] = useState({})
+    const [ currentStatus, setCurrentStatus ] = useState(null)
     const [ isLoading, setIsLoading ] = useState(true)
 
     useEffect(() => {
@@ -14,6 +15,14 @@ export default function ThreeDayWeather() {
         .then(res => {
             setWeather(res.data);
             setIsLoading(false);
+            return res.data
+        }).then(res => {
+            if (res.daypart[0].wxPhraseLong[0] === null) {
+                setCurrentStatus(res.daypart[0].wxPhraseLong[1])
+            }
+            else {
+                setCurrentStatus(res.daypart[0].wxPhraseLong[0])
+            }
         })
     }, [])
 
@@ -21,10 +30,27 @@ export default function ThreeDayWeather() {
         return <h2>Loading...</h2>
     }
     
-
+    
     return (
         <div className='ThreeDayWeather'>
-            <WeatherCard day={weather.dayOfWeek[0]} />
+            <WeatherCard 
+                day={weather.dayOfWeek[0]} 
+                status={currentStatus}
+                lo={weather.calendarDayTemperatureMin[0]}
+                hi={weather.calendarDayTemperatureMax[0]}
+            />
+            <WeatherCard 
+                day={weather.dayOfWeek[1]} 
+                status={weather.daypart[0].wxPhraseLong[2]}
+                lo={weather.calendarDayTemperatureMin[1]}
+                hi={weather.calendarDayTemperatureMax[1]}
+            />
+            <WeatherCard 
+                day={weather.dayOfWeek[2]} 
+                status={weather.daypart[0].wxPhraseLong[4]}
+                lo={weather.calendarDayTemperatureMin[2]}
+                hi={weather.calendarDayTemperatureMax[2]}
+            />
         </div>
     )
 }

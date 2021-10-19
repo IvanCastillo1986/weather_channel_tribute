@@ -58,6 +58,11 @@
     margin-top: 0;
     text-transform: uppercase;
 }
+.WeatherCard p:last-of-type {
+    color: white;
+    font-size: 42px;
+    text-shadow: 2px 3px 2px black;
+}
 .LoHiDiv {
     color: white;
     text-shadow: 2px 3px 2px black;
