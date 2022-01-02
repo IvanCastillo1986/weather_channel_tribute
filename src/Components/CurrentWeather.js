@@ -4,6 +4,7 @@ import axios from 'axios'
 
 
 export default function CurrentWeather() {
+
     const [weatherData, setWeatherData] = useState({})
     const [isLoading, setLoading] = useState(true)
     const API = apiURL()
@@ -11,11 +12,12 @@ export default function CurrentWeather() {
     useEffect(() => {
         axios.get(`${API}`)
         .then(res => {
-            setWeatherData(res.data.observations[0])
+            console.log(res.data)
+            setWeatherData(res.data)
             setLoading(false)
         })
-    }, [API])
-    console.log(weatherData)
+
+    }, [])
 
     if (isLoading) {
         return <h1>Loading...</h1>
@@ -24,19 +26,19 @@ export default function CurrentWeather() {
     return (
         <div className='CurrentWeather'>
             <div className='leftDiv'>
-                <p className='temp'>{weatherData.temp}°</p>
-                <p>{weatherData.wx_phrase}</p>
-                <p>Wind: {weatherData.wdir_cardinal} &nbsp; {weatherData.wspd}</p>
+                <p className='temp'>°</p>
+                <p></p>
+                <p>Wind: </p>
             </div>
             <div className='rightDiv'>
-                <span className='city'>{weatherData.obs_name}</span>
+                <span className='city'></span>
                 <div>
-                    <p>Humidity: {Math.round(weatherData.rh)}%</p>
-                    <p>Dewpoint: {weatherData.dewPt}°</p>
-                    <p>Ceiling: {weatherData.icon_extd}ft.</p>
-                    <p>Visibility: {weatherData.vis}mi.</p>
-                    <p>Pressure: {weatherData.pressure}</p>
-                    <p>Wind Chill: {weatherData.wc}°</p>
+                    <p>Humidity: {weatherData.main.humidity}%</p>
+                    <p>Dewpoint: {}°</p>
+                    <p>Ceiling: ft.</p>
+                    <p>Visibility: {weatherData.visibility}mi.</p>
+                    <p>Pressure: {weatherData.main.pressure}</p>
+                    <p>Wind Chill: {Math.floor(weatherData.main.feels_like)}°</p>
                 </div>
             </div>
         </div>
