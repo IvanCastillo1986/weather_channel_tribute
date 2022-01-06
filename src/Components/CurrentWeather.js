@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { apiURL } from '../util/apiURL.js'
 import axios from 'axios'
+import windDir from '../Helper/windDir'
 
 
 export default function CurrentWeather() {
+
+    console.log(windDir)
 
     const [weatherData, setWeatherData] = useState({})
     const [isLoading, setLoading] = useState(true)
@@ -23,12 +26,17 @@ export default function CurrentWeather() {
         return <h1>Loading...</h1>
     }
 
+
     return (
         <div className='CurrentWeather'>
             <div className='leftDiv'>
-                <p className='temp'>°</p>
-                <p></p>
-                <p>Wind: </p>
+                <p className='temp'>{Math.round(weatherData.main.temp)}°</p>
+                <p>{weatherData.weather[0].main}</p>
+                <div className='wind'>
+                    <span>Wind: </span> 
+                    <span>{windDir(weatherData.wind.deg)}</span>
+                    <span>{weatherData.wind.speed}</span>
+                </div>
             </div>
             <div className='rightDiv'>
                 <span className='city'></span>
