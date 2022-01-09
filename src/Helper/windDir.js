@@ -20,4 +20,4 @@ const windDir = (deg) => {
 
 // console.log(windDir(160))
 
-module.exports = windDir
+export default windDir

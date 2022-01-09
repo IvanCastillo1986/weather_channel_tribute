@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { apiURL } from '../util/apiURL.js'
 import axios from 'axios'
 import windDir from '../Helper/windDir'
+import capitalize from '../Helper/capitalize.js'
 
 
 export default function CurrentWeather() {
-
-    console.log(windDir)
 
     const [weatherData, setWeatherData] = useState({})
     const [isLoading, setLoading] = useState(true)
@@ -31,11 +30,11 @@ export default function CurrentWeather() {
         <div className='CurrentWeather'>
             <div className='leftDiv'>
                 <p className='temp'>{Math.round(weatherData.main.temp)}°</p>
-                <p>{weatherData.weather[0].main}</p>
+                <p>{capitalize(weatherData.weather[0].description)}</p>
                 <div className='wind'>
                     <span>Wind: </span> 
                     <span>{windDir(weatherData.wind.deg)}</span>
-                    <span>{weatherData.wind.speed}</span>
+                    <span>{Math.round(weatherData.wind.speed)}</span>
                 </div>
             </div>
             <div className='rightDiv'>
