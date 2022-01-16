@@ -40,10 +40,10 @@ export default function CurrentWeather() {
             <div className='rightDiv'>
                 <span className='city'>{weatherData.name}</span>
                 <div>
-                    <div className='field'> <span>Humidity:</span> <span>{weatherData.main.humidity} %</span> </div>
+                    <div className='field'> <span>Humidity:</span> <span>{weatherData.main.humidity}%</span> </div>
                     <div className='field'> <span>Dewpoint:</span> <span>{}°</span> </div>
                     <div className='field'> <span>Ceiling:</span> <span> ft.</span> </div>
-                    <div className='field'> <span>Visibility:</span> <span>{weatherData.visibility}mi.</span> </div>
+                    <div className='field'> <span>Visibility:</span> <span>{Number(weatherData.visibility)/1000 + Number(weatherData.visibility)%1000}mi.</span> </div>
                     <div className='field'> <span>Pressure:</span> <span>{weatherData.main.pressure}</span> </div>
                     <div className='field'> <span>Wind Chill:</span> <span>{Math.floor(weatherData.main.feels_like)}°</span> </div>
                 </div>

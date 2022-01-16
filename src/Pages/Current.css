@@ -46,11 +46,11 @@
     margin: 0;
     padding: 5px 0 12px 0;
 }
-.rightDiv>div>div {
+.rightDiv .field {
     font-size: 33px;
     display: flex;
     justify-content: space-between;
-    padding: 0 0 16px 28px;
+    padding: 0 13px 16px 35px;
 }
 
 .wind {
