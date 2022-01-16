@@ -31,30 +31,26 @@
 }
 
 .rightDiv {
-    width: 50%;
+    width: 45%;
     font-size: 24px;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding-left: 30px;
 }
 .rightDiv > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     height: 400px;
 }
 .city {
     color: yellow;
-    font-size: 30px;
+    font-size: 37px;
     margin: 0;
-    height: 30px;
+    padding: 5px 0 12px 0;
 }
-.rightDiv div {
-    margin-left: 18px;
-    margin-top: 10px;
-}
-.rightDiv p {
-    margin: 8px;
+.rightDiv>div>div {
+    font-size: 33px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 16px 28px;
 }
 
 .wind {
