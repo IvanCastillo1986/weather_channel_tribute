@@ -14,10 +14,8 @@ export default function DateTime() {
 
     let mySeconds = date.getSeconds()
     if (String(mySeconds).length < 2) mySeconds = '0' + mySeconds
-    console.log(mySeconds)
 
     const myDay = date.toDateString().slice(0, -5)
-    console.log('myDay', myDay)
 
     const [myTime] = useState(`${myHours} : ${myMinutes} : ${mySeconds}`)
 

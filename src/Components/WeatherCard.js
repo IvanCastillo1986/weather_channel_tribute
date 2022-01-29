@@ -1,20 +1,22 @@
 import React from 'react'
+import capitalize from '../Helper/capitalize'
 
 
-export default function WeatherCard({ day, status, lo, hi }) {
 
-    // let today = new Date(day.datetime.split('-').join(','))
+export default function WeatherCard({ day }) {
     
-    // const options = {weekday: 'short'}
-    // today = new Intl.DateTimeFormat('en-US', options).format(today)
+    let today = new Date(day.Date)
+    const options = {weekday: 'short'}
+    today = new Intl.DateTimeFormat('en-US', options).format(today)
+
 
     return (
         <div className='WeatherCard'>
-                <p className='Day'>{day.slice(0, 3)}</p>
-                <p>{status}</p>
+                <p className='Day'>{today}</p>
+                <p>{capitalize(day.Day.IconPhrase)}</p>
                 <div className='LoHiDiv'>
-                    <div><span>Lo</span><span>{lo}</span></div> 
-                    <div><span>Hi</span><span>{hi}</span></div> 
+                    <div><span>Lo</span><span>{day.Temperature.Maximum.Value}</span></div> 
+                    <div><span>Hi</span><span>{day.Temperature.Minimum.Value}</span></div> 
                 </div>
         </div>
     )
