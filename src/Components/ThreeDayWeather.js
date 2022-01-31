@@ -11,7 +11,10 @@ export default function ThreeDayWeather() {
 
     useEffect(() => {
         axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/4174_PC?apikey=U2N7um6wJN5nS75oPS8rr9Y6GnGHy2k2&details=true`)
-        .then(res => setWeather(res.data.DailyForecasts))
+        .then(res => {
+            console.log(res)
+            setWeather(res.data.DailyForecasts)
+        })
         .then(res => setIsLoading(false))
 
         console.log(weather)

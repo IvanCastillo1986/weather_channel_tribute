@@ -60,14 +60,14 @@
 }
 .WeatherCard p:last-of-type {
     color: white;
-    font-size: 42px;
+    font-size: 34px;
     text-shadow: 2px 3px 2px black;
 }
 .LoHiDiv {
     color: white;
     text-shadow: 2px 3px 2px black;
     width: 100%;
-    font-size: 38px;
+    font-size: 34px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -83,3 +83,12 @@
     display: inline-flex;
     flex-direction: column;
 }
+
+
+/* Icon images from weather_spritesheet */
+#num1 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png');
+}
+
