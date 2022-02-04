@@ -13,7 +13,7 @@ export default function WeatherCard({ day }) {
     return (
         <div className='WeatherCard'>
                 <p className='Day'>{today}</p>
-                <img id='num1' alt="weather icon" />
+                <div id='num14' role='img' aria-label='weather icon'></div>
                 <p>{capitalize(day.Day.IconPhrase)}</p>
                 <div className='LoHiDiv'>
                     <div><span>Lo</span><span>{day.Temperature.Maximum.Value}</span></div> 

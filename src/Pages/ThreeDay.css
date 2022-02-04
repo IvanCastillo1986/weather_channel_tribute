@@ -86,9 +86,88 @@
 
 
 /* Icon images from weather_spritesheet */
+
+/* Light Rain */
 #num1 {
     height: 128px;
     width: 128px;
-    background: url('/src/Images/_spritesheet_128.png');
+    background: url('/src/Images/_spritesheet_128.png') 0px 0px;
 }
-
+/* Moderate Rain */
+#num2 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -138px -4px;
+}
+/* Sleet */
+#num3 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -276px -4px;
+}
+/* Snowing */
+#num4 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -414px -5px;
+}
+/* Thunder */
+#num5 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') 0px -139px;
+}
+/* Sunny */
+#num6 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -138px -139px;
+}
+/* Cloudy */
+#num7 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -276px -150px;
+}
+/* Moderate Rain */
+#num8 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -414px -139px;
+}
+/* Windy */
+#num9 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') 0px -290px;
+}
+/* Moderately Cloudy */
+#num10 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -278px -290px;
+}
+/* Lightly Cloudy */
+#num11 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -414px -290px;
+}
+/* Thunderstorms */
+#num12 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -558px -277px;
+}
+/* Heavy Rain */
+#num13 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -279px -415px;
+}
+/* Freezing Rain */
+#num14 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -418px -419px;
+}
