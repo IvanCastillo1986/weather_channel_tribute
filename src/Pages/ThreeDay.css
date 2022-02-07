@@ -87,13 +87,13 @@
 
 /* Icon images from weather_spritesheet */
 
-/* Light Rain */
+/* Flurries */
 #num1 {
     height: 128px;
     width: 128px;
     background: url('/src/Images/_spritesheet_128.png') 0px 0px;
 }
-/* Moderate Rain */
+/* Light Rain */
 #num2 {
     height: 128px;
     width: 128px;
@@ -110,6 +110,12 @@
     height: 128px;
     width: 128px;
     background: url('/src/Images/_spritesheet_128.png') -414px -5px;
+}
+/* Ice */
+#num15 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -558px -5px;
 }
 /* Thunder */
 #num5 {
@@ -129,7 +135,7 @@
     width: 128px;
     background: url('/src/Images/_spritesheet_128.png') -276px -150px;
 }
-/* Moderate Rain */
+/* Rain and Snow */
 #num8 {
     height: 128px;
     width: 128px;
@@ -170,4 +176,10 @@
     height: 128px;
     width: 128px;
     background: url('/src/Images/_spritesheet_128.png') -418px -419px;
+}
+/* Not Found */
+#num16 {
+    height: 128px;
+    width: 128px;
+    background: url('/src/Images/_spritesheet_128.png') -556px -432px;
 }
