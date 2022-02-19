@@ -54,14 +54,17 @@
 .Day {
     font-size: 42px;
     color: yellow;
-    text-shadow: 2px 3px 2px black;
-    margin-top: 0;
+    text-shadow: 3px 4px 1.5px black;
+    margin: 0;
     text-transform: uppercase;
+    transform: scale(.9, 1.1);
 }
 .WeatherCard p:last-of-type {
     color: white;
     font-size: 34px;
     text-shadow: 2px 3px 2px black;
+    text-align: center;
+    margin-top: 0;
 }
 .LoHiDiv {
     color: white;
@@ -75,6 +78,14 @@
 .LoHiDiv div:first-of-type {
     display: inline-flex;
     flex-direction: column;
+}
+.LoHiDiv div span:first-of-type {
+    transform: scale(.95, 1.1);
+}
+.LoHiDiv div span:last-of-type {
+    margin-top: 3px;
+    margin-bottom: 12px;
+    transform: scale(1.2, 1.8);
 }
 .LoHiDiv div:last-of-type span:first-of-type {
     color: yellow;
