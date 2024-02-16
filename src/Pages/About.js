@@ -8,14 +8,13 @@ export default function About() {
             <h1>About Me</h1>
             <p>
                 Howdy! My name is Ivan and this is a very simple weather application I've created
-                using React, react-bootstrap, react-router-dom.
-                It's one of my first projects using bootstrap, so I'm using it as a learning opportunity
-                to step away from raw CSS, which is what I'm most comfortable with.
+                using React. This application gave me a chance to stretch my skills as I do something
+                that I've wanted to do for a while, which is drawing with CSS.
             </p>
             <p>
                 The main purpose was to have a new application that's personal to me, where I could try new
                 things as I learn them, since it might help to apply these new things on something that means
-                more to me on a personal level.
+                even more to me on a personal level.
             </p>
             <p>
                 Plus, it helps me meet those beautiful GitHub contributions which might help as I look

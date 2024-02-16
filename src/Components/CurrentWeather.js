@@ -11,6 +11,7 @@ export default function CurrentWeather() {
     const [isLoading, setLoading] = useState(true)
     const API = apiURL()
 
+
     useEffect(() => {
         axios.get(`${API}`)
         .then(res => {
@@ -19,7 +20,7 @@ export default function CurrentWeather() {
             setLoading(false)
         })
 
-    }, [])
+    }, [API])
 
     if (isLoading) {
         return <h1>Loading...</h1>
