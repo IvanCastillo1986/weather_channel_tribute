@@ -20,6 +20,8 @@ export default function About() {
                 Plus, it helps me meet those beautiful GitHub contributions which might help as I look
                 for work, as well as adding something new to my portfolio ;)
             </p>
+
+            <p>Compare this site to the channel: https://www.youtube.com/watch?v=lYKDlnBNJKM</p>
         </div>
     )
 }

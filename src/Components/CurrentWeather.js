@@ -9,13 +9,12 @@ export default function CurrentWeather() {
 
     const [weatherData, setWeatherData] = useState({})
     const [isLoading, setLoading] = useState(true)
-    const API = apiURL()
+    const API = apiURL(true)
 
 
     useEffect(() => {
         axios.get(`${API}`)
         .then(res => {
-            console.log(res.data)
             setWeatherData(res.data)
             setLoading(false)
         })
