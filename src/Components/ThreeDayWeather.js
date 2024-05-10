@@ -14,12 +14,10 @@ export default function ThreeDayWeather() {
     useEffect(() => {
         axios.get(`${API}`)
         .then(res => {
-            console.log(res)
             setWeather(res.data.DailyForecasts)
         })
         .then(res => setIsLoading(false))
 
-        console.log(weather)
     }, [])
 
     if (isLoading) {
