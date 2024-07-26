@@ -1,7 +1,13 @@
-html {
+html, body {
   background-color: rgb(240, 101, 14);
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-body {
+#root {
+  background-color: rgb(240, 101, 14);
+  height: 100%;
   margin: 0;
+  padding: 0;
 }

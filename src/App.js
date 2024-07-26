@@ -33,13 +33,7 @@ export default function App() {
           <Route path='/about' component={About} />
         </Switch>
       </main>
-    <Footer />
+      <Footer />
     </div>
   )
 }
-
-// The header needs to contain the Latest Observation one side
-// And the Time and Date on the other side
-  // TnD needs to be positioned absolute on the right side
-// TnD will be just above the right edge of the current Page div
-  // Wherever the current Page div ends, is where the TnD element ends

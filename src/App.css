@@ -1,5 +1,6 @@
 .App {
-  height: 100vh;
+  height: 100%;
+  margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   background: linear-gradient(
@@ -10,15 +11,15 @@
     rgb(255, 127, 47) 80% 
   );
   position: relative;
-}
-.App>div {
-  /* width: 100%; */
+  /*  This stops whitespace at bottom of page  */
+  overflow: auto;
 }
 
 main {
-  width: 840px;;
-  margin-top: 45px;
-  margin-left: 60px;
+  width: 840px;
+  height: 100%;
+  margin: 45px 0 0 180px;
+  padding-left: 60px;
 }
 
 .Logo {
@@ -84,7 +85,7 @@ main {
 }
 
 .Footer {
-  position: absolute;
+  position: fixed;
   background: linear-gradient(
     to bottom,
     white, white 1px,
@@ -105,7 +106,7 @@ main {
   top: -1px;
 }
 .Footer h1 {
-  padding-left: 300px;
+  padding-left: 5%;
   margin-top: 0;
   text-shadow: black 3px 4px 3px; 
 }
