@@ -1,0 +1,24 @@
+.DropdownMenu {
+    color: white;
+    position: absolute;
+    top: 80px;
+    left: -59px;
+    z-index: 100;
+}
+
+.DropdownMenu ul {
+    background-color: rgb(41, 63, 113);
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px;
+    border: 3px solid white;
+    font-weight: 500;
+}
+
+.DropdownMenu li {
+    padding-bottom: 10px;
+}
+.DropdownMenu li:last-of-type {
+    padding-bottom: 0;
+}

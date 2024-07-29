@@ -3,8 +3,8 @@ import { Switch, Route } from 'react-router-dom'
 import './App.css'
 
 
-import NavBar from './Components/NavBar'
-import Footer from './Components/Footer'
+import NavBar from './Layout/NavBar'
+import Footer from './Layout/Footer'
 import Logo from './Components/Logo'
 import DateTime from './Components/DateTime'
 import Home from './Pages/Home'
@@ -21,8 +21,8 @@ export default function App() {
     <div className='App'>
       <NavBar />
       <main>
-        <Logo />
         <header className='Header'>
+          <Logo />
           <span className='title'>Latest Observations</span>
           <DateTime />
         </header>

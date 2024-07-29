@@ -14,49 +14,111 @@
 .CurrentWeather {
     display: flex;
     text-shadow: 2px 3px 2px black;
-    height: 400px;
+    /* height: 400px; */
 }
 
 .leftDiv {
     width: 50%;
-    font-size: 24px;
+    font-size: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 360px;
+    /* height: 360px; */
 }
 .temp {
-    font-size: 42px;
+    font-size: 1.75em;
 }
-
-.rightDiv {
-    width: 45%;
-    font-size: 24px;
-    display: flex;
-    flex-direction: column;
-    padding-left: 30px;
-}
-.rightDiv > div {
-    height: 400px;
-}
-.city {
-    color: yellow;
-    font-size: 37px;
-    margin: 0;
-    padding: 5px 0 12px 0;
-}
-.rightDiv .field {
-    font-size: 33px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 13px 16px 35px;
-}
-
 .wind {
     width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 34px;
+    font-size: 1.4em;
+}
+
+
+@media only screen and (max-width: 920px) {
+    .Current {
+        background: linear-gradient(
+            rgb(79, 122, 216) 0, 
+            rgb(41, 63, 113) 5%, 
+            rgb(41, 63, 113) 95%, 
+            rgb(79, 122, 216) 100%
+        );
+        border-right: 5px solid rgb(79, 122, 216);
+        margin-right: 64px;
+        height: 340px;
+        color: white;
+    }
+    .leftDiv {
+        font-size: 1.1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .temp {
+        font-size: 1.8em;
+    }
+    .wind {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .Current {
+        width: 100%;
+    }
+}
+
+
+/* | Right side of component | */
+
+
+.rightDiv {
+    width: 45%;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+.city {
+    color: yellow;
+    font-size: 1.55em;
+    margin: 0;
+    padding: 5px 0 12px 0;
+}
+.rightDiv .field {
+    font-size: 1.38em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 13px 16px 35px;
+}
+
+
+@media only screen and (max-width: 920px) {
+    .rightDiv {
+        font-size: 1.5em;
+        padding-left: 10px;
+    }
+    .rightDiv > div {
+        /* height: 400px; */
+    }
+    .city {
+        color: yellow;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 5px 0 12px 0;
+    }
+    .rightDiv .field {
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 13px 16px 20px;
+    }
 }
