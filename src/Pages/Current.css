@@ -106,9 +106,6 @@
         font-size: 1.5em;
         padding-left: 10px;
     }
-    .rightDiv > div {
-        /* height: 400px; */
-    }
     .city {
         color: yellow;
         font-size: 1.2em;
@@ -120,5 +117,51 @@
         display: flex;
         justify-content: space-between;
         padding: 0 13px 16px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .leftDiv {
+        width: 45%;
+        font-size: 1.1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .leftDiv .temp {
+        font-size: 1.8em;
+    }
+    .leftDiv .clouds {
+        text-align: center;
+    }
+    .leftDiv .wind {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.2em;
+    }
+
+
+    .rightDiv {
+        width: 65%;
+        font-size: 1.5em;
+        padding-left: 5px;
+    }
+    .rightDiv .city {
+        color: yellow;
+        font-size: 1.1em;
+        margin: 0;
+        padding: 5px 0 12px 0;
+    }
+    .rightDiv .field {
+        font-size: .9em;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 13px 16px 20px;
+    }
+    .rightDiv .field span:nth-of-type(2) {
+        padding-left: 10px;
     }
 }

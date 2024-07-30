@@ -30,7 +30,7 @@ export default function CurrentWeather() {
         <div className='CurrentWeather'>
             <div className='leftDiv'>
                 <p className='temp'>{Math.round(weatherData.main.temp)}°</p>
-                <p>{capitalize(weatherData.weather[0].description)}</p>
+                <p className='clouds'>{capitalize(weatherData.weather[0].description)}</p>
                 <div className='wind'>
                     <span>Wind: </span> 
                     <span>{windDir(weatherData.wind.deg)}</span>
