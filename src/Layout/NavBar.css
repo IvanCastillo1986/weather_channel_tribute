@@ -64,6 +64,13 @@ nav a {
     margin-left: 20px;
     position: relative;
 }
+@media only screen and (max-width: 480px) {
+    .MenuContainer {
+        display: block;
+        width: unset;
+        margin: 10px 0 0 50%;
+    }
+}
 
 .overlay {
     position: absolute;

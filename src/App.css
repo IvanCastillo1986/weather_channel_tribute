@@ -23,13 +23,13 @@ main {
 }
 
 @media only screen and (max-width: 770px) {
+  .App {
+    display: block;
+  }
   main {
     width: 90%;
     margin: 45px auto 0;
     padding-left: 0;
-  }
-  .App {
-    display: block;
   }
 }
 
@@ -89,61 +89,77 @@ main {
     padding-left: 0;
   }
   .Header {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    align-items: center;
   }
   .Logo {
     min-width: 100px;
     max-width: 100px;
     height: 78px;
-    display: inline-flex;
-    border: 5px solid white;
     border-radius: 22px;
-    margin-right: 5px;
-    position: relative;
-    z-index: 98;
   }
   .Logo p {
-    color: white;
-    text-align: center;
     font-size: 1.2em;
-    padding: 4px 2px;
-    margin: 0;
   }
   .Header .title {
     font-size: 1.6em;
     justify-self: left;
   }
   .DateTime {
-    min-width: 170px;
     grid-column: 3/4;
-    /* font-size: 24px; */
     font-size: 19px;
-    text-shadow: black 2px 3px 2px;
-    display: inline-flex;
-    flex-direction: column;
     align-items: flex-start;
     padding-left: 10px;
   }
 }
 
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 480px) {
+  .Header {
+    margin-top: -90px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .Logo {
+    min-width: 130px;
+    max-width: 130px;
+    height: 95px;
+    border-radius: 24px;
+  }
+  .Logo p {
+    font-size: 1.5em;
+  }
+  .Header .title {
+    font-size: 1.6em;
+    justify-self: left;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .DateTime {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 19px;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
 }
 
 
 .Home {
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
+  margin-right: 10%;
 }
 .Home > div {
-  font-size: 18px;
+  font-size: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+}
+@media only screen and (max-width: 770px) {
+  .Home {
+    margin-right: 0;
+  }
 }
 
 .Footer {
@@ -167,8 +183,11 @@ main {
   height: 1px;
   top: -1px;
 }
-.Footer h1 {
+.Footer div {
+  font-size: 34px;
+  font-weight: bold;
   padding-left: 5%;
   margin-top: 0;
   text-shadow: black 3px 4px 3px; 
 }
+

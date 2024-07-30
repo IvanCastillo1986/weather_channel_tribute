@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <div className='Footer'>
-            <h1>Barometric Pressure:&nbsp;&nbsp; 29.87 R</h1>
+            <div><span>Barometric Pressure:</span>&nbsp;&nbsp; <span>29.87&nbsp;R</span></div>
         </div>
     )
 }

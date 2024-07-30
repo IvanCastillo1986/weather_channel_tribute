@@ -1,0 +1,12 @@
+.About h1 {
+    text-align: center;
+}
+.About p {
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width: 480px) {
+    .About {
+        padding-bottom: 120px;
+    }
+}

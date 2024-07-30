@@ -1,10 +1,11 @@
 import React from 'react'
+import './About.css'
 
 
 export default function About() {
 
     return (
-        <div>
+        <div className='About'>
             <h1>About Me</h1>
             <p>
                 Howdy! My name is Ivan and this is a very simple weather application I've created

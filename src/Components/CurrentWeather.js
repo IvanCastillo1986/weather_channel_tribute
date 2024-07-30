@@ -32,8 +32,8 @@ export default function CurrentWeather() {
                 <p className='temp'>{Math.round(weatherData.main.temp)}°</p>
                 <p className='clouds'>{capitalize(weatherData.weather[0].description)}</p>
                 <div className='wind'>
-                    <span>Wind: </span> 
-                    <span>{windDir(weatherData.wind.deg)}</span>
+                    <span>Wind&nbsp;:&nbsp;</span> 
+                    <span>{windDir(weatherData.wind.deg)}&nbsp;</span>
                     <span>{Math.round(weatherData.wind.speed)}</span>
                 </div>
             </div>
