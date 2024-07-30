@@ -1,29 +1,47 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 
 export default function DateTime() {
 
-    const date = new Date()
+    const [time, setTime] = useState('')
+    const [meridian, setMeridian] = useState('')
+    const [day, setDay] = useState('')
+    
 
-    let myHours = date.getHours()
-    // if (String(myHours).length < 2) myHours = '0' + myHours
+    function updateTime() {
+        const newDateObj = new Date()
+        const newTime = newDateObj.toLocaleTimeString().split(/[: ]/)
 
-    let myMinutes = date.getMinutes()
-    if (String(myMinutes).length < 2) myMinutes = '0' + myMinutes
+        const hours = newTime[0]
+        const minutes = newTime[1]
+        if (minutes.length < 2) minutes = '0' + minutes
+        const seconds = newTime[2]
+        if (seconds.length < 2) seconds = '0' + seconds
+        
+        setTime(`${hours} : ${minutes} : ${seconds}`)
+        
+        const newMeridian = newTime[3]
+        setMeridian(newMeridian)
 
-    let mySeconds = date.getSeconds()
-    if (String(mySeconds).length < 2) mySeconds = '0' + mySeconds
+        const newDay = newDateObj.toDateString().slice(0, -5)
+        setDay(newDay)
+    }
+    
+    useEffect(() => {
+        setInterval(() => {
+            updateTime()
+        }, 1000)
+    }, [])
 
-    const myDay = date.toDateString().slice(0, -5)
-
-    const [myTime] = useState(`${myHours} : ${myMinutes} : ${mySeconds}`)
 
 
     return (
         <span className='DateTime'>
-            <div>{myTime}{myHours <= 12 ? <span> AM</span> : <span> PM</span>}</div>
-            <div>{myDay.toUpperCase()}</div>
+            <div>{time} {meridian}</div>
+            {/* <div>{myTime}{myHours <= 12 ? <span> AM</span> : <span> PM</span>}</div> */}
+            {/* <div>{myHours}</div> */}
+            <div>{day.toUpperCase()}</div>
         </span>
     )
 }
